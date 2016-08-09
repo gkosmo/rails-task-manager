@@ -1,0 +1,10 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :percent %>
+  <%= f.number_field :percent, in: 0...100 %>
+  <%= f.label :due_date %>
+  <%= f.date_field :due_date %>
+
+  <%= f.submit %>
+<% end %>

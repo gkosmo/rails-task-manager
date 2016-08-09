@@ -1,0 +1,17 @@
+<h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+
+
+<% @tasks.each do |t| %>
+<p>
+   <h2> <%=  t.id %> </h2>
+</p><p>
+   <h2> <%=  t.due_date %> </h2>
+
+  </p>
+<p>
+
+<h2> percent : <%=  t.percent %> </h2>
+</p>
+ <%= link_to t.title, task_path(t) %>
+ <% end %>
